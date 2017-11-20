@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const hbs = require('hbs');
+const port = process.env.PORT||3000;
 
 app.set('views engine' ,hbs);
 app.use((req,res,next)=>{
@@ -21,4 +22,4 @@ app.use(express.static(__dirname+'/public'));
 
 
 
-app.listen(3000);
+app.listen(port);
